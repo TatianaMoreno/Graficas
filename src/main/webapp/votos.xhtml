@@ -13,14 +13,14 @@
 
             <center><h3>...Voto electronico...</h3> </center>
             <p:panelGrid  columns="3" layout="grid">
-                <h:commandLink style="display:block; text-align:center">
+                <h:commandLink style="display:block; text-align:center" >
                     <p:graphicImage value ="resources/img/anggy.jpeg"/>
                     <div></div>
                     <p:outputLabel value="#{msg.nombreCan1} " />
                     <div></div>
                     <p:outputLabel value="#{msg.numeroCan1} " />
                 </h:commandLink>
-                
+
                 <h:commandLink style="display:block; text-align:center">
                     <p:graphicImage value ="resources/img/santi.jpeg"/>
                     <div></div>
@@ -37,6 +37,10 @@
                 </h:commandLink>
 
             </p:panelGrid>
+            <p:panel>
+                <p:poll interval="3" update="votes" />
+                <p:chart id="votes" type="pie" model="#{chartView.livePieModel}" style="width:400px;height:300px"/>
+            </p:panel>
         </h:form>
     </p:panel>      
 </html>
