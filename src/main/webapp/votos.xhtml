@@ -7,25 +7,24 @@
     <h:head>
         <title>Voto electronico</title>
     </h:head>
-    
-        <p:panel>            
-            <h:form id="form" >
 
-                <center><h3>...CARROS...</h3> </center>
-                <p:panelGrid  columns="2" >
-                    <p:outputLabel value="NOMBRE: " />
-                    <p:inputText id="nombre" value="#{menuCarro.nombre}" required="true"/>
+    <p:panel>      
+        <h:form id="form" >
 
-                    <p:outputLabel value="MARCA: " />
-                    <p:selectOneMenu id="marca" value="#{menuCarro.car}"  style="width:125px">
-                        <f:selectItems value="#{menuCarro.marca}" />
-                    </p:selectOneMenu>
+            <center><h3>...Voto electronico...</h3> </center>
+            <p:panelGrid  columns="3" >
+                <h:commandButton>
+                    <p:graphicImage value ="resources/adri.jpeg"/>
+                </h:commandButton>
+                <h:commandButton>
+                    <p:graphicImage value ="resources/santi.jpeg"/>
+                </h:commandButton>
+                <h:commandButton>
+                    <p:graphicImage value ="resources/anggy.jpeg"/>
+                </h:commandButton>
 
-                    <p:outputLabel value="MODELO: " />
-                    <p:calendar id="month" value="#{menuCarro.modelo}" pattern="yyyy"  yearRange="1990:2019"  required="true"/>
-                    <p:messages for="month"/>
-
-                </p:panelGrid>
-    
+            </p:panelGrid>
+        </h:form>
+    </p:panel>      
 </html>
 
