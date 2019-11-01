@@ -12,7 +12,7 @@
         <h:form id="form" >
             <center><h3>...Voto electronico...</h3> </center>
             <p:panelGrid  columns="3" layout="grid">
-                <p:commandLink style="display:block; text-align:center" update="grafica" >
+                <p:commandLink style="display:block; text-align:center" update="grafica" actionListener="#{contollerVotos.sumarVotos(1)}">
                     <p:graphicImage value ="resources/img/anggy.jpeg"/>
                     <div></div>
                     <p:outputLabel value="#{msg.nombreCan1} " />
@@ -20,14 +20,14 @@
                     <p:outputLabel value="#{msg.numeroCan1} " />
                 </p:commandLink>
 
-                <p:commandLink style="display:block; text-align:center" update="grafica" >
+                <p:commandLink style="display:block; text-align:center" update="grafica" actionListener="#{contollerVotos.sumarVotos(2)}">
                     <p:graphicImage value ="resources/img/santi.jpeg"/>
                     <div></div>
                     <p:outputLabel value="#{msg.nombreCan2} " />
                     <div></div>
                     <p:outputLabel value="#{msg.numeroCan2} " />
                 </p:commandLink>
-                <p:commandLink style="display:block; text-align:center" update="grafica" >
+                <p:commandLink style="display:block; text-align:center" update="grafica" actionListener="#{contollerVotos.sumarVotos(3)}">
                     <p:graphicImage value ="resources/img/adri.jpeg"/>
                     <div></div>
                     <p:outputLabel value="#{msg.nombreCan3} " />
@@ -37,7 +37,7 @@
 
             </p:panelGrid>
             <p:panel id="grafica">
-
+                <p:chart type="pie" model="#{contollerVotos.pieModel1}" style="width:400px;height:300px" /> 
             </p:panel>
         </h:form>
     </p:panel>      
